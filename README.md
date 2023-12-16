@@ -6,6 +6,8 @@ A web page exposing the next departures in each and every station of RATP Ligne 
 
 ### Deploy web content on netlify
 
+[Visit deployed version](https://metro-ligne7.netlify.app)
+
 ### Install server.js on EC2
 
 - Log into EC2 instance with SSH
