@@ -1,13 +1,13 @@
 const http = require("http")
 
-const PORT = 8080;
+const PORT = 3000;
 const HEADERS = {
   'Content-Type': 'application/json',
   'Access-Control-Allow-Origin': '*',
   'Access-Control-Allow-Methods': 'OPTIONS, POST, GET',
   'Access-Control-Max-Age': 2592000,
 };
-const GET_ENDPOINT = "/ligne7/departures/courneuve"
+const GET_ENDPOINT = "/ratp/ligne7/departures/courneuve"
 const SERVER_START_MESSAGE = [
   `[START] Listening on ${PORT}`,
   `[ENDPOINT] ${GET_ENDPOINT}`,
@@ -41,7 +41,7 @@ http.createServer(async (req, res) => {
   }
 }).listen(
   PORT,
-  "0.0.0.0",
+  "localhost",
   () => console.log(SERVER_START_MESSAGE)
 );
 
