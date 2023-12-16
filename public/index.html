@@ -11,12 +11,6 @@
       href="https://fonts.googleapis.com/css2?family=Ubuntu:ital@0;1&amp;display=swap"
       rel="stylesheet"
     />
-    <link
-      rel="stylesheet"
-      href="//cdnjs.cloudflare.com/ajax/libs/modern-normalize/0.5.0/modern-normalize.min.css"
-    />
-    <link rel="stylesheet" href="./styles/main.css" />
-    <link rel="stylesheet" href="./styles/toggle-switch.css" />
     <link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png" />
     <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png" />
     <link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png" />
@@ -27,6 +21,29 @@
         font-family: Ubuntu, sans-serif;
         font-weight: bolder;
         font-size: x-large;
+        cursor: default;
+        caret-color: transparent;
+      }
+
+      .line-info {
+        padding: 20px;
+      }
+
+      .line-info div, .line-info span {
+        display: inline-block;
+        vertical-align: middle;
+      }
+
+      #line-logo {
+        background-color: rgb(232 167 186);
+        color: rgb(35 59 139);
+        border-radius: 50%;
+        width: 34px;
+        height: 34px;
+        padding: 10px;
+        text-align: center;
+        font: 32px Arial, sans-serif;
+        font-weight: bolder;
       }
 
       .container {
@@ -45,10 +62,13 @@
         display: flex;
         flex-direction: line;
         justify-content: space-between;
-        border: 4px solid lightgray;
+        border: 2px solid lightgray;
         border-radius: 5px;
         margin: 10px;
         padding: 30px;
+        -webkit-box-shadow: 0 10px 6px -6px #777;
+        -moz-box-shadow: 0 10px 6px -6px #777;
+        box-shadow: 0 10px 6px -6px #777;
       }
 
       .station-point {
@@ -83,11 +103,12 @@
     </style>
   </head>
   <body style="background-color: white; color: rgb(35 59 139)">
-    <nav>
-      <h1>Ligne 7</h1>
+    <nav class="line-info">
+      <div id="line-logo">7</div>
+      <span>La Courneuve > Villejuif</span>
     </nav>
     <div class="container">
-      <div class="item">
+      <div class="item effect1" id="1">
         <span class="horizontal-container">
           <div>
             <span class="station-point"></span>
@@ -97,7 +118,7 @@
         </span>
         <span class="station-time"> 5min </span>
       </div>
-      <div class="item">
+      <div class="item" id="2">
         <span class="horizontal-container">
           <div>
             <span class="station-point"></span>
@@ -107,7 +128,7 @@
         </span>
         <span class="station-time"> 5min </span>
       </div>
-      <div class="item">
+      <div class="item" id="3">
         <span class="horizontal-container">
           <div>
             <span class="station-point"></span>
@@ -117,7 +138,7 @@
         </span>
         <span class="station-time"> 5min </span>
       </div>
-      <div class="item">
+      <div class="item" id="4">
         <span class="horizontal-container">
           <div>
             <span class="station-point"></span>
@@ -127,7 +148,7 @@
         </span>
         <span class="station-time"> 5min </span>
       </div>
-      <div class="item">
+      <div class="item" id="5">
         <span class="horizontal-container">
           <div>
             <span class="station-point"></span>
@@ -137,7 +158,7 @@
         </span>
         <span class="station-time"> 5min </span>
       </div>
-      <div class="item">
+      <div class="item" id="6">
         <span class="horizontal-container">
           <div>
             <span class="station-point"></span>
@@ -147,7 +168,7 @@
         </span>
         <span class="station-time"> 5min </span>
       </div>
-      <div class="item">
+      <div class="item" id="7">
         <span class="horizontal-container">
           <div>
             <span class="station-point"></span>
@@ -157,7 +178,7 @@
         </span>
         <span class="station-time"> 5min </span>
       </div>
-      <div class="item">
+      <div class="item" id="8">
         <span class="horizontal-container">
           <div>
             <span class="station-point"></span>
@@ -167,7 +188,7 @@
         </span>
         <span class="station-time"> 5min </span>
       </div>
-      <div class="item">
+      <div class="item" id="9">
         <span class="horizontal-container">
           <div>
             <span class="station-point"></span>
@@ -177,7 +198,7 @@
         </span>
         <span class="station-time"> 5min </span>
       </div>
-      <div class="item">
+      <div class="item" id="10">
         <span class="horizontal-container">
           <div>
             <span class="station-point"></span>
@@ -187,7 +208,7 @@
         </span>
         <span class="station-time"> 5min </span>
       </div>
-      <div class="item">
+      <div class="item" id="11">
         <span class="horizontal-container">
           <div>
             <span class="station-point"></span>
@@ -197,7 +218,7 @@
         </span>
         <span class="station-time"> 5min </span>
       </div>
-      <div class="item">
+      <div class="item" id="12">
         <span class="horizontal-container">
           <div>
             <span class="station-point"></span>
@@ -207,7 +228,7 @@
         </span>
         <span class="station-time"> 5min </span>
       </div>
-      <div class="item">
+      <div class="item" id="13">
         <span class="horizontal-container">
           <div>
             <span class="station-point"></span>
@@ -217,7 +238,7 @@
         </span>
         <span class="station-time"> 5min </span>
       </div>
-      <div class="item">
+      <div class="item" id="14">
         <span class="horizontal-container">
           <div>
             <span class="station-point"></span>
@@ -227,7 +248,7 @@
         </span>
         <span class="station-time"> 5min </span>
       </div>
-      <div class="item">
+      <div class="item" id="15">
         <span class="horizontal-container">
           <div>
             <span class="station-point"></span>
@@ -237,7 +258,7 @@
         </span>
         <span class="station-time"> 5min </span>
       </div>
-      <div class="item">
+      <div class="item" id="16">
         <span class="horizontal-container">
           <div>
             <span class="station-point"></span>
@@ -247,7 +268,7 @@
         </span>
         <span class="station-time"> 5min </span>
       </div>
-      <div class="item">
+      <div class="item" id="17">
         <span class="horizontal-container">
           <div>
             <span class="station-point"></span>
@@ -257,7 +278,7 @@
         </span>
         <span class="station-time"> 5min </span>
       </div>
-      <div class="item">
+      <div class="item" id="18">
         <span class="horizontal-container">
           <div>
             <span class="station-point"></span>
@@ -267,7 +288,7 @@
         </span>
         <span class="station-time"> 5min </span>
       </div>
-      <div class="item">
+      <div class="item" id="19">
         <span class="horizontal-container">
           <div>
             <span class="station-point"></span>
@@ -277,7 +298,7 @@
         </span>
         <span class="station-time"> 5min </span>
       </div>
-      <div class="item">
+      <div class="item" id="20">
         <span class="horizontal-container">
           <div>
             <span class="station-point"></span>
@@ -287,7 +308,7 @@
         </span>
         <span class="station-time"> 5min </span>
       </div>
-      <div class="item">
+      <div class="item" id="21">
         <span class="horizontal-container">
           <div>
             <span class="station-point"></span>
@@ -297,7 +318,7 @@
         </span>
         <span class="station-time"> 5min </span>
       </div>
-      <div class="item">
+      <div class="item" id="22">
         <span class="horizontal-container">
           <div>
             <span class="station-point"></span>
@@ -307,7 +328,7 @@
         </span>
         <span class="station-time"> 5min </span>
       </div>
-      <div class="item">
+      <div class="item" id="23">
         <span class="horizontal-container">
           <div>
             <span class="station-point"></span>
@@ -317,7 +338,7 @@
         </span>
         <span class="station-time"> 5min </span>
       </div>
-      <div class="item">
+      <div class="item" id="24">
         <span class="horizontal-container">
           <div>
             <span class="station-point"></span>
@@ -327,7 +348,7 @@
         </span>
         <span class="station-time"> 5min </span>
       </div>
-      <div class="item">
+      <div class="item" id="25">
         <span class="horizontal-container">
           <div>
             <span class="station-point"></span>
@@ -337,7 +358,7 @@
         </span>
         <span class="station-time"> 5min </span>
       </div>
-      <div class="item">
+      <div class="item" id="26">
         <span class="horizontal-container">
           <div>
             <span class="station-point"></span>
@@ -347,7 +368,7 @@
         </span>
         <span class="station-time"> 5min </span>
       </div>
-      <div class="item">
+      <div class="item" id="27">
         <span class="horizontal-container">
           <div>
             <span class="station-point"></span>
@@ -357,7 +378,7 @@
         </span>
         <span class="station-time"> 5min </span>
       </div>
-      <div class="item">
+      <div class="item" id="28">
         <span class="horizontal-container">
           <div>
             <span class="station-point"></span>
@@ -367,7 +388,7 @@
         </span>
         <span class="station-time"> 5min </span>
       </div>
-      <div class="item">
+      <div class="item" id="29">
         <span class="horizontal-container">
           <div>
             <span class="station-point"></span>
@@ -377,7 +398,7 @@
         </span>
         <span class="station-time"> 5min </span>
       </div>
-      <div class="item">
+      <div class="item" id="30">
         <span class="horizontal-container">
           <div>
             <span class="station-point"></span>
@@ -387,7 +408,7 @@
         </span>
         <span class="station-time"> 5min </span>
       </div>
-      <div class="item">
+      <div class="item" id="31">
         <span class="horizontal-container">
           <div>
             <span class="station-point"></span>
@@ -397,7 +418,7 @@
         </span>
         <span class="station-time"> 5min </span>
       </div>
-      <div class="item">
+      <div class="item" id="32">
         <span class="horizontal-container">
           <div>
             <span class="station-point"></span>
@@ -407,7 +428,7 @@
         </span>
         <span class="station-time"> 5min </span>
       </div>
-      <div class="item">
+      <div class="item" id="33">
         <span class="horizontal-container">
           <div>
             <span class="station-point"></span>
@@ -418,7 +439,7 @@
         <span class="station-time"> 5min </span>
       </div>
     </div>
-    <div class="item">
+    <div class="item" id="34">
       <span class="horizontal-container">
         <div>
           <span class="station-point"></span>
@@ -428,7 +449,7 @@
       </span>
       <span class="station-time"> 5min </span>
     </div>
-    <div class="item">
+    <div class="item" id="35">
       <span class="horizontal-container">
         <div>
           <span class="station-point"></span>
@@ -438,7 +459,7 @@
       </span>
       <span class="station-time"> 5min </span>
     </div>
-    <div class="item">
+    <div class="item" id="36">
       <span class="horizontal-container">
         <div>
           <span class="station-point"></span>
@@ -448,7 +469,7 @@
       </span>
       <span class="station-time"> 5min </span>
     </div>
-    <div class="item">
+    <div class="item" id="37">
       <span class="horizontal-container">
         <div>
           <span class="station-point"></span>
@@ -458,7 +479,7 @@
       </span>
       <span class="station-time"> 5min </span>
     </div>
-    <div class="item">
+    <div class="item" id="38">
       <span class="horizontal-container">
         <div>
           <span class="station-point"></span>
@@ -468,7 +489,7 @@
       </span>
       <span class="station-time"> 5min </span>
     </div>
-    <div class="item">
+    <div class="item" id="39">
       <span class="horizontal-container">
         <div>
           <span class="station-point"></span>
@@ -479,4 +500,36 @@
       <span class="station-time"> 5min </span>
     </div>
   </body>
+  <script>
+      const now = new Date(Date.now())
+      const stations = document.querySelectorAll('.item')
+
+      const update = () => {
+        return fetch('https://newsletter.signsofthenight.com/ratp/ligne7/departures/courneuve', { method: 'GET' })
+          .then(res => res.json())
+          .then(({response: line7}) => {
+            if(line7.status === 'closed') {
+              for (const station of stations) {
+                const stationTime = station.children[1]
+                stationTime.innerHTML = "-"
+              }
+              return
+            }
+
+            let id = 0
+            for (const station of stations) {
+              const stationTime = station.children[1]
+              const time = line7.departures[id].minutes
+              console.log(time)
+              stationTime.innerHTML = time + " min"
+              id += 1
+            }
+          })
+      }
+
+      update()
+      setInterval(update, 20000)
+
+        
+  </script>
 </html>
