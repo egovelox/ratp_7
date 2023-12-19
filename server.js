@@ -25,6 +25,7 @@ setInterval(() => {
     return
   }
 
+  status = 'open'
   for (const d of departures) {
     if (d.minutes === 0) {
       d.minutes = 7
