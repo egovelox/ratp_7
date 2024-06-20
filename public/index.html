@@ -1,4 +1,4 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="en">
   <head>
     <meta charset="utf-8" />
@@ -29,7 +29,8 @@
         padding: 20px;
       }
 
-      .line-info div, .line-info span {
+      .line-info div,
+      .line-info span {
         display: inline-block;
         vertical-align: middle;
       }
@@ -42,7 +43,9 @@
         height: 34px;
         padding: 10px;
         text-align: center;
-        font: 32px Arial, sans-serif;
+        font:
+          32px Arial,
+          sans-serif;
         font-weight: bolder;
       }
 
@@ -501,35 +504,36 @@
     </div>
   </body>
   <script>
-      const now = new Date(Date.now())
-      const stations = document.querySelectorAll('.station')
+    const now = new Date(Date.now());
+    const stations = document.querySelectorAll(".station");
 
-      const update = () => {
-        return fetch('https://newsletter.signsofthenight.com/ratp/ligne7/departures/courneuve', { method: 'GET' })
-          .then(res => res.json())
-          .then(({response: line7}) => {
-            if(line7.status === 'closed') {
-              for (const station of stations) {
-                const stationTime = station.children[1]
-                stationTime.innerHTML = "-"
-              }
-              return
-            }
-
-            let id = 0
+    const update = () => {
+      return fetch(
+        "https://newsletter.signsofthenight.com/ratp/ligne7/departures/courneuve",
+        { method: "GET" },
+      )
+        .then((res) => res.json())
+        .then(({ response: line7 }) => {
+          if (line7.status === "closed") {
             for (const station of stations) {
-              const stationTime = station.children[1]
-              const time = line7.departures[id].minutes
-              console.log(time)
-              stationTime.innerHTML = time + " min"
-              id += 1
+              const stationTime = station.children[1];
+              stationTime.innerHTML = "-";
             }
-          })
-      }
+            return;
+          }
 
-      update()
-      setInterval(update, 20000)
+          let id = 0;
+          for (const station of stations) {
+            const stationTime = station.children[1];
+            const time = line7.departures[id].minutes;
+            console.log(time);
+            stationTime.innerHTML = time + " min";
+            id += 1;
+          }
+        });
+    };
 
-        
+    update();
+    setInterval(update, 20000);
   </script>
 </html>

@@ -16,8 +16,7 @@ A web page exposing the next departures in each and every station of RATP Ligne 
 - npm i -g pm2
 - copy server.js into your EC2
 
-
-Then add into ``nginx.conf`` :
+Then add into `nginx.conf` :
 
 ```
 server {
@@ -37,6 +36,7 @@ server {
 ```
 
 Then run
+
 ```bash
 pm2 start server.js
 
